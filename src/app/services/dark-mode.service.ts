@@ -11,7 +11,7 @@ export class DarkModeService {
   updateDarkMode() {
     this.darkModeSignal.update((value) => (value === "dark" ? "null" : "dark"));
   }
-  constructor() {
+  constructor() { 
     effect(() => {
       window.localStorage.setItem('darkModeSignal', JSON.stringify(this.darkModeSignal()))
     });
